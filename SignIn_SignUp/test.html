@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Login and Registration Form Design</title>
+            <link rel="stylesheet" href="testStyle.css">
+            
+    </head>
+    <body>
+        <div class="login-page">
+            <div class="form">
+
+                <!----------------------------SIGN UP------------------------------->
+                <form class="register-form">
+
+                    <label for="First Name"><b>First Name</b></label>
+                    <input type="text" placeholder="First Name" id="FName">
+                    
+                    <label for="Last Name"><b>Last Name</b></label>
+                    <input type="text" placeholder="Last Name" id="LName">
+
+                    <label for="Username"><b>Username</b></label>
+                    <input type="text" placeholder="Username" id="Username">
+
+                    <label for="password"><b>Password</b></label>
+                    <input type="text" placeholder="Password" id="password">
+
+                    <button>Sign Up</button>
+                    <p class="message" onclick="clearSignUp()">Already have an account? <a href="#">Login</a></p>
+                </form>
+
+                <script>
+                    function clearSignUp(){
+
+                        document.getElementById("Username").value = "";
+                        document.getElementById("password").value = "";
+                        document.getElementById("FName").value = "";
+                        document.getElementById("LName").value = "";
+                    }
+                </script>
+
+                <!----------------------------LOGIN FORM -------------------------------->
+                <form class="login-form">
+                    <label for="Username-login"><b>Username</b></label>
+                    <input type="text" placeholder="Username" id="Username-login">
+        
+                    <label for="password-login"><b>Password</b></label>
+                    <input type="text" placeholder="Password" id="password-login">
+
+                    <button>Login</button>
+                    <p class="message" onclick="clearLogin()">Don't have an account? <a href="#">Sign Up</a></p>
+
+                </form>
+
+                <script>
+                    function clearLogin(){
+
+                        document.getElementById("Username").value = "";
+                        document.getElementById("password").value = "";
+                    }
+                </script>
+
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <script>
+            $('.message a').click(function(){$('form').animate({height: "toggle", opacity: "toggle"}, 'slow'); });
+        </script>
+
+    </body>
+
+
+</html>
